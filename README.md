@@ -1,4 +1,4 @@
-# 🌿 GreenTech MVP Sostenible
+# GreenTech MVP Sostenible
 **Álvaro López de San Román — 1.º DAM**
 
 ---
