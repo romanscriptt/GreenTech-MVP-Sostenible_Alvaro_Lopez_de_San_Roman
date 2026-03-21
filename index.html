@@ -5,29 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Salvemos el Planeta - GreenTech</title>
 
-    <!--
-      OPTIMIZACIÓN DE FUENTES:
-      - Original: cargaba 5 pesos (100,300,400,700,900) → petición enorme
-      - Refactorizado: solo 2 pesos necesarios (400,700) + display=swap
-    -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
     <style>
-      /* ── Variables de color ── */
-      :root {
-        --verde-principal: #2e7d32;
-        --verde-claro: #f4fdf4;
-        --verde-boton: #28a745;
-        --verde-boton-hover: #1e7e34;
-        --texto-blanco: #ffffff;
-        --texto-oscuro: #1a1a1a;
-        --sombra-texto: 2px 2px 6px rgba(0, 0, 0, 0.75);
-      }
-
-      /* ── Reset básico ── */
       * {
         margin: 0;
         padding: 0;
@@ -36,42 +19,38 @@
 
       body {
         font-family: "Montserrat", sans-serif;
-        background-color: var(--verde-claro);
-        color: var(--texto-oscuro);
+        background-color: #f4fdf4;
       }
 
-      /* ── Sección Hero ── */
       .hero {
         background-image: url("https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1600&auto=format&fit=crop");
         background-size: cover;
         background-position: center;
-        min-height: 100vh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
         padding: 20px;
-        color: var(--texto-blanco);
-        text-shadow: var(--sombra-texto);
+        color: white;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
       }
 
-      .hero h1 {
-        font-size: clamp(2rem, 6vw, 4rem);
+      h1 {
+        font-size: 3rem;
         font-weight: 700;
         margin-bottom: 16px;
       }
 
-      .hero p {
-        font-size: clamp(1rem, 2.5vw, 1.5rem);
-        margin-bottom: 32px;
-        max-width: 600px;
+      p {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
       }
 
-      /* ── Botón eco (sin Bootstrap, CSS puro) ── */
       .btn-eco {
-        background-color: var(--verde-boton);
-        color: var(--texto-blanco);
+        background-color: #28a745;
+        color: white;
         border: none;
         padding: 15px 40px;
         font-size: 1.1rem;
@@ -79,107 +58,33 @@
         font-weight: 700;
         border-radius: 50px;
         cursor: pointer;
-        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.45);
-        transition: background-color 0.25s ease, transform 0.15s ease;
-        text-shadow: none;
       }
 
       .btn-eco:hover {
-        background-color: var(--verde-boton-hover);
-        transform: translateY(-2px);
+        background-color: #1e7e34;
       }
 
-      /* ── Sección de contenido con imagen lazy ── */
-      .seccion-info {
-        max-width: 900px;
-        margin: 60px auto;
-        padding: 0 20px;
-        text-align: center;
-      }
-
-      .seccion-info h2 {
-        font-size: 1.8rem;
-        color: var(--verde-principal);
-        margin-bottom: 16px;
-      }
-
-      .seccion-info p {
-        font-size: 1rem;
-        line-height: 1.7;
-        color: #444;
-        margin-bottom: 30px;
-      }
-
-      /* La imagen usa loading="lazy" — se carga solo cuando el usuario baja */
-      .imagen-seccion {
-        width: 100%;
-        max-width: 800px;
-        height: auto;
-        border-radius: 12px;
-        display: block;
-        margin: 0 auto;
-        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
-      }
-
-      /* ── Footer ── */
       footer {
         background-color: #1a1a1a;
-        color: var(--texto-blanco);
+        color: white;
         text-align: center;
         padding: 16px;
-        font-size: 0.9rem;
       }
     </style>
   </head>
 
   <body>
 
-    <!-- SECCIÓN HERO -->
-    <section class="hero">
+    <div class="hero">
       <h1>Salvemos el Planeta</h1>
       <p>Únete a la revolución verde de GreenTech.</p>
-
-      <!--
-        Sin Font Awesome: usamos un emoji Unicode estándar.
-        Funciona en todos los navegadores, pesa 0 bytes extra.
-      -->
       <button class="btn-eco">🌿 Quiero ayudar</button>
-    </section>
+    </div>
 
-    <!-- SECCIÓN INFORMATIVA con imagen lazy loading -->
-    <section class="seccion-info">
-      <h2>¿Por qué actuar ahora?</h2>
-      <p>
-        Cada decisión importa. Desde el código que escribimos hasta los
-        dispositivos que usamos, podemos construir un futuro más sostenible.
-        GreenTech Solutions trabaja para que la tecnología sea parte
-        de la solución, no del problema.
-      </p>
-
-      <!--
-        loading="lazy": el navegador solo descarga esta imagen
-        cuando el usuario se acerca a ella al hacer scroll.
-        Ahorra datos y mejora el tiempo de carga inicial.
-      -->
-      <img
-        class="imagen-seccion"
-        src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=1200&auto=format&fit=crop"
-        alt="Naturaleza y bosque verde sostenible"
-        loading="lazy"
-        width="1200"
-        height="800"
-      />
-    </section>
-
-    <!-- FOOTER con JS nativo (sin jQuery ni moment.js) -->
     <footer>
       <p>GreenTech Solutions &copy; <span id="anio"></span> — Haciendo un mundo mejor.</p>
     </footer>
 
-    <!--
-      Sin jQuery, sin moment.js.
-      Date().getFullYear() es JavaScript puro, pesa 0 bytes extra.
-    -->
     <script>
       document.getElementById("anio").textContent = new Date().getFullYear();
     </script>
