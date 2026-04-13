@@ -1,93 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Salvemos el Planeta - GreenTech</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTech - MVP Sostenible</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <header class="hero">
+        <div class="hero-box">
+            <h1>Salvemos el Planeta</h1>
+            <p>Software ligero para un futuro más verde.</p>
+            
+            <a href="#info" class="boton">Quiero ayudar 🌱</a> 
+        </div>
+    </header>
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    <main id="info" class="contenedor">
+        <div class="texto">
+            <h2>Cada byte ahorrado cuenta</h2>
+            <p>Al eliminar frameworks pesados, reducimos el consumo eléctrico en los centros de datos y evitamos el sobrecalentamiento de los dispositivos.</p>
+        </div>
+        
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600" 
+             alt="Planta creciendo" 
+             loading="lazy" 
+             decoding="async"
+             class="img-impacto">
+    </main>
 
-      body {
-        font-family: "Montserrat", sans-serif;
-        background-color: #f4fdf4;
-      }
-
-      .hero {
-        background-image: url("https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1600&auto=format&fit=crop");
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-        color: white;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-      }
-
-      h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        margin-bottom: 16px;
-      }
-
-      p {
-        font-size: 1.3rem;
-        margin-bottom: 30px;
-      }
-
-      .btn-eco {
-        background-color: #28a745;
-        color: white;
-        border: none;
-        padding: 15px 40px;
-        font-size: 1.1rem;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 700;
-        border-radius: 50px;
-        cursor: pointer;
-      }
-
-      .btn-eco:hover {
-        background-color: #1e7e34;
-      }
-
-      footer {
-        background-color: #1a1a1a;
-        color: white;
-        text-align: center;
-        padding: 16px;
-      }
-    </style>
-  </head>
-
-  <body>
-
-    <div class="hero">
-      <h1>Salvemos el Planeta</h1>
-      <p>Únete a la revolución verde de GreenTech.</p>
-      <button class="btn-eco">🌿 Quiero ayudar</button>
-    </div>
-
-    <footer>
-      <p>GreenTech Solutions &copy; <span id="anio"></span> — Haciendo un mundo mejor.</p>
+    <footer class="footer">
+        <p>GreenTech Solutions &copy; 2026 — Desarrollo Web Responsable</p>
     </footer>
 
-    <script>
-      document.getElementById("anio").textContent = new Date().getFullYear();
-    </script>
-
-  </body>
+</body>
 </html>
