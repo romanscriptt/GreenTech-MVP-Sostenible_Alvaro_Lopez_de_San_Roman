@@ -1,0 +1,69 @@
+/* ESTRATEGIA DE ECO-DISEÑO:
+   - Uso de fuentes del sistema (0 peticiones HTTP).
+   - Sin frameworks: reducción drástica de la huella de carbono digital.
+*/
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    color: #1a472a;
+    background-color: #f4fdf4;
+    line-height: 1.5;
+}
+
+.hero {
+    height: 100vh;
+    /* Imagen optimizada con capa de color para legibilidad */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #2d6a4f;
+    color: white;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    border: 2px solid #52b788;
+    transition: transform 0.2s;
+}
+
+.boton:hover {
+    transform: scale(1.05);
+    background-color: #40916c;
+}
+
+.contenedor {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.texto { flex: 1; min-width: 300px; }
+
+.img-impacto {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 12px;
+}
+
+.footer {
+    background: #1a472a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+}
