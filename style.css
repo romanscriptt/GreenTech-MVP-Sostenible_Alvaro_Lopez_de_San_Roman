@@ -1,8 +1,3 @@
-/* ESTRATEGIA DE ECO-DISEÑO:
-   - Uso de fuentes del sistema (0 peticiones HTTP).
-   - Sin frameworks: reducción drástica de la huella de carbono digital.
-*/
-
 body {
     font-family: system-ui, -apple-system, sans-serif;
     margin: 0;
